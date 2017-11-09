@@ -115,7 +115,8 @@ BUBBLE:
 # Lock the position of the last digit; this digit is sorted
 LOCKLAST:
     # Reduce the maximum size $s3 by 1 word
-    subi     $s3, $s3, 4
+    li      $t3, 4
+    sub     $s3, $s3, $t3
     addi	$s4, $s0, 0
     addi    $s5, $s0, 4
     j BUBBLE
